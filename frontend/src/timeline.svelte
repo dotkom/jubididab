@@ -1,17 +1,17 @@
 <script>
-    import Event from "./event.svelte"
-
-    let result = null
-
-    async function getEvents () {
-		const res = await fetch('https://sanity', {
-			method: 'GET',
-
-		})
-
-        const json = await res.json()
-		result = JSON.stringify(json)
-    }
+	import Event from './event.svelte';
+	const fetchEvent = (async () => {
+		const res = await fetch('https://retoolapi.dev/A3MXcI/events');
+		return await res.json();
+	})();
 </script>
 
-<Event/>
+{#await fetchEvent}
+	<p>...waiting</p>
+{:then events}
+	{#each events as event}
+		<Event {event} />
+	{/each}
+{:catch error}
+	<pre>{error}</pre>
+{/await}
