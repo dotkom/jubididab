@@ -1,59 +1,33 @@
-<script context="module" lang="ts">
-	export const prerender = true;
-</script>
 
-<script lang="ts">
-	import Counter from '$lib/Counter.svelte';
-</script>
-
-<svelte:head>
-	<title>Home</title>
-</svelte:head>
 
 <section>
-	<h1>
-		<div class="welcome">
-			<picture>
-				<source srcset="svelte-welcome.webp" type="image/webp" />
-				<img src="svelte-welcome.png" alt="Welcome" />
-			</picture>
-		</div>
 
-		to your new<br />SvelteKit app
-	</h1>
+    <div class="flex flex-col relative items-center overflow-hidden">
+        <img class="l-0 transform-gpu scale-105" src="troop.png" alt="no"/>
+        <div class=" backdrop-filter backdrop-blur-sm overflow-hidden absolute w-full h-full flex justify-center items-center">
+            <img class="h-20" src="Online_hvit_o.svg" alt="Online logo"/>
+            <h1 class="text-center text-7xl ml-4 text-white font-bold mb-2">35 ÅR!</h1>
+            
+        </div>
 
-	<h2>
-		try editing <strong>src/routes/index.svelte</strong>
-	</h2>
+    </div>
 
-	<Counter />
+    <div class="flex justify-center">
+        <div class= "w-3/5 max-w-screen-xl text-white text-blue-700">
+            
+            <p >Linjeforeningen Online ble grunnlagt 
+                høsten 1985 på Den allmennvitenskapelige 
+                høgskole på Lade. Tre tiår senere skal vi 
+                feire opprettelsen, og alle årene imellom. 
+                Jubileumskomiteen inviterer alle nåværende
+                og tidligere Online-medlemmer til en ukelang 
+                feiring i Trondheim. Lørdag 12. november 
+                setter vi kronen på verket med jubileumsgalla. 
+                Velkommen!</p>
+
+        </div>
+        
+    </div>
+    
+    <img src="dranks.png" alt="yes"/>
 </section>
-
-<style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 1;
-	}
-
-	h1 {
-		width: 100%;
-	}
-
-	.welcome {
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
-	}
-</style>
