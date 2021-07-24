@@ -4,7 +4,10 @@ const config = {
 		"./src/**/*.{html,js,svelte,ts}",
 	],
 	theme: {
-		extend: {},
+		fontFamily: {
+			sans: ['"Lato"']
+		},
+	
 	},
 	plugins: [],
 };
