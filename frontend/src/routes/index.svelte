@@ -1,18 +1,14 @@
 <script>
+	import Description from '../components/description.svelte';
 	import Header from '../components/header.svelte';
 	import Timeline from '../components/timeline.svelte';
 </script>
 
-<main>
+<main class="gradient-background">
 	<Header text="35 ÅR" />
-	<div class="w-full  flex justify-center">
-		<div class="max-w-screen-xl text-white text-black ">
-			<p class="mt-10 mb-10">
-				Linjeforeningen Online ble grunnlagt høsten 1985 på Den allmennvitenskapelige høgskole på
-				Lade. Tre tiår senere skal vi feire opprettelsen, og alle årene imellom. Jubileumskomiteen
-				inviterer alle nåværende og tidligere Online-medlemmer til en ukelang feiring i Trondheim.
-				Lørdag 12. november setter vi kronen på verket med jubileumsgalla. Velkommen!
-			</p>
+	<div class="w-full flex flex-col items-center">
+		<Description />
+		<div class="max-w-screen-xl text-black flex items-center flex-col">
 			<h1 class="text-5xl mb-5">Program.</h1>
 			<Timeline />
 		</div>
@@ -20,3 +16,9 @@
 
 	<img src="dranks.png" alt="yes" />
 </main>
+
+<style>
+	main {
+		background: #ca95d9;
+	}
+</style>
