@@ -1038,7 +1038,8 @@
 
 "@sanity/client@^2.13.0":
   version "2.13.0"
-  resolved "https://registry.npmjs.org/@sanity/client/-/client-2.13.0.tgz#c69bb9594b5a7de9fe8ebebd3f060474d216abe5"
+  resolved "https://registry.yarnpkg.com/@sanity/client/-/client-2.13.0.tgz#c69bb9594b5a7de9fe8ebebd3f060474d216abe5"
+  integrity sha512-hp4snNL+VVWNamVkezDxmYM6oCNecB43iOt+tSEJ8VtRbb6yvrqqYUT0WEQEwoF9xWbfJ7Uu/WHwjm8ry93xVQ==
   dependencies:
     "@sanity/eventsource" "^2.13.0"
     "@sanity/generate-help-url" "^2.13.0"
