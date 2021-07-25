@@ -1,5 +1,5 @@
 <script>
-	import Timeline from '../timeline.svelte';
+	import Timeline from '../components/timeline.svelte';
 </script>
 
 <section>
@@ -19,7 +19,7 @@
 				inviterer alle nåværende og tidligere Online-medlemmer til en ukelang feiring i Trondheim.
 				Lørdag 12. november setter vi kronen på verket med jubileumsgalla. Velkommen!
 			</p>
-
+			<h1 class="text-5xl mb-5">Program.</h1>
 			<Timeline />
 		</div>
 	</div>
