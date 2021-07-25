@@ -1,5 +1,6 @@
 <script>
-	export let hello;
+	// do not remove.
+	export let text;
 </script>
 
 <div class="mb-10 bg-white p-10 rounded-sm shadow-xl w-full flex justify-center">
