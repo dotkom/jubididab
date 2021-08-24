@@ -20,16 +20,20 @@
 			<span class="s6" /> -->
 		</div>
 	</div>
+
 	<div class="stripes-container">
 		<div class="stripes stripes--peach">
 			<span class="s5" />
 			<span class="s6" />
 		</div>
 	</div>
-	<div class="w-full flex flex-col items-center">
-		<div class="max-w-screen-xl text-black flex items-center flex-col">
-			<h1 class="text-5xl mb-5">Program.</h1>
-			<Timeline />
+
+	<div class="program-container">
+		<div class="w-full flex flex-col items-center">
+			<div class="max-w-screen-xl text-black flex items-center flex-col">
+				<h1 class="text-5xl mb-5">Program.</h1>
+				<Timeline />
+			</div>
 		</div>
 	</div>
 
@@ -38,7 +42,7 @@
 
 <style lang="scss">
 	main {
-		background: #ffffff;
+		background: #4022b6;
 	}
 
 	.wrapper {
@@ -56,8 +60,10 @@
 		transform: skewY(-4deg);
 	}
 
-	.header {
-		// height: 900px;
+	.program-container {
+		margin-top: -80rem;
+		padding-top: 25rem;
+		background-color: transparent;
 	}
 
 	$stripe-height: 50px;
@@ -93,7 +99,7 @@
 			content: '';
 			position: absolute;
 			// top: -20%;
-			bottom: -30%;
+			// bottom: -30%;
 			left: 0;
 			z-index: -1;
 			background-color: #f6f9fc;
@@ -107,7 +113,7 @@
 	.stripes {
 		display: grid;
 		position: absolute;
-		top: -195%;
+		top: -190%;
 		left: 0;
 		right: 0;
 		bottom: 0;
@@ -163,5 +169,15 @@
 			}
 		}
 		/* -------- End of peach stripes -------- */
+	}
+
+	$dark: #0065ff;
+	$medium: #2684ff;
+	$light: #b3d4ff;
+	$leftGrad: linear-gradient(270deg, transparent 35%, $light 100%);
+	$rightGrad: linear-gradient(90deg, transparent 35%, $light 100%);
+
+	* {
+		box-sizing: border-box;
 	}
 </style>

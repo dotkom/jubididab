@@ -3,7 +3,7 @@
 </script>
 
 <div class="mb-10 bg-white p-10 rounded-sm shadow-xl w-full flex justify-center py-36">
-	<p class="max-w-3xl pt-52 pb-52" style="transform: skewY(4deg);">
+	<p class="max-w-3xl pt-48 pb-48" style="transform: skewY(4deg);">
 		Linjeforeningen Online ble grunnlagt høsten 1985 på Den allmennvitenskapelige høgskole på Lade.
 		Tre tiår senere skal vi feire opprettelsen, og alle årene imellom. Jubileumskomiteen inviterer
 		alle nåværende og tidligere Online-medlemmer til en ukelang feiring i Trondheim. Lørdag 12.
