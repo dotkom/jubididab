@@ -37,12 +37,12 @@
 		</div>
 	</div>
 
-	<img src="dranks.png" alt="yes" />
+	<img src="dranks.png" alt="yes" style="margin: 0" width="100%" />
 </main>
 
 <style lang="scss">
 	main {
-		background: #4022b6;
+		background-image: linear-gradient(to bottom, #310273, #501586, #6d2899, #8a3bac, #a74ebf);
 	}
 
 	.wrapper {
@@ -73,9 +73,9 @@
 
 	/* Colors */
 	$stripes_peach: (
-		'1': #edd89a,
-		'2': #f2b705,
-		'3': #f28705
+		'1': #ffd599,
+		'2': #f9b759,
+		'3': #ff9600
 	);
 
 	@mixin stripesBG($color) {
