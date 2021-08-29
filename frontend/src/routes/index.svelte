@@ -28,16 +28,20 @@
 		</div>
 	</div>
 
-	<!-- <div class="program-container">
-		<div class="w-full flex flex-col items-center">
-			<div class="max-w-screen-xl text-black flex items-center flex-col"> -->
-	<!-- <h1 class="text-5xl mb-5">Program.</h1> -->
-	<!-- <Timeline /> -->
-	<!-- </div>
+	<div id="stripes-container-timeline" class="relative">
+		<div
+			id="popup"
+			class="z-10 absolute top-2/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 box-content h-3/5 w-3/6  bg-white shadow-2xl rounded-lg"
+		>
+			<!-- <div class="program-container">
+				<div class="w-full flex flex-col items-center">
+					<div class="max-w-screen-xl text-black flex items-center flex-col"> -->
+			<!-- <h1 class="text-5xl mb-5">Program.</h1>
+			<Timeline /> -->
+			<!-- </div>
+				</div>
+			</div> -->
 		</div>
-	</div> -->
-
-	<div id="stripes-container-timeline">
 		<div id="stripes">
 			<span />
 			<span />
@@ -45,12 +49,26 @@
 			<span />
 			<span />
 		</div>
+		<div id="thank-you-section" class="-top-2/3 z-10">Thank</div>
 	</div>
 
 	<img src="dranks.png" alt="yes" style="margin: 0" width="100%" />
 </main>
 
 <style lang="scss">
+	#popup {
+		margin-top: -10rem;
+	}
+
+	#thank-you-section {
+		-webkit-transform: skewY(-4deg);
+		transform: skewY(-4deg);
+		margin-top: -23rem;
+		background-color: white;
+		height: 450px;
+		z-index: 20;
+	}
+
 	main {
 		background: white;
 	}
@@ -197,8 +215,8 @@
 
 	#stripes {
 		padding-top: 105px;
-		padding-bottom: 800px;
-		height: 220vh;
+		padding-bottom: 820px;
+		height: 230vh;
 		background: linear-gradient(150deg, #310273 15%, #923baa 70%, #d98fee 94%);
 		clip-path: polygon(100% 0, 100% 80%, 0 99%, 0 0);
 		display: grid;
