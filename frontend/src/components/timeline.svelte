@@ -1,17 +1,8 @@
 <script>
 	import Event from './event.svelte';
-	const fetchEvent = (async () => {
-		const res = await fetch('https://retoolapi.dev/A3MXcI/events');
-		return await res.json();
-	})();
+	export let events;
 </script>
 
-{#await fetchEvent}
-	<p>...waiting</p>
-{:then events}
-	{#each events as event}
-		<Event {event} />
-	{/each}
-{:catch error}
-	<pre>{error}</pre>
-{/await}
+{#each events as event}
+	<Event {event} />
+{/each}

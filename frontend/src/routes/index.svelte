@@ -1,24 +1,43 @@
+<script context="module">
+	export async function load({ fetch }) {
+		const data = await fetch('https://retoolapi.dev/A3MXcI/events');
+		const json = await data.json();
+		const events = json.map((event) => ({ ...event, date: new Date(event.date) }));
+		events.sort((event1, event2) => event1.date - event2.date);
+		return {
+			props: { events }
+		};
+	}
+</script>
+
 <script>
 	import Description from '../components/description.svelte';
 	import Header from '../components/header.svelte';
 	import Timeline from '../components/timeline.svelte';
+
+	export let events;
 </script>
 
-<main class="gradient-background">
+<main class="gradient-background ">
 	<Header text="35 ÅR" />
-	<div class="w-full flex flex-col items-center">
+	<div class="content-container">
 		<Description />
-		<div class="max-w-screen-xl text-black flex items-center flex-col">
+		<div class="event-container">
 			<h1 class="text-5xl mb-5">Program.</h1>
-			<Timeline />
+			<Timeline {events} />
 		</div>
 	</div>
-
 	<img src="dranks.png" alt="yes" />
 </main>
 
-<style>
+<style lang="postcss">
 	main {
 		background: #ca95d9;
+	}
+	.content-container {
+		@apply w-full flex flex-col items-center;
+	}
+	.event-container {
+		@apply max-w-screen-xl text-black flex items-center flex-col;
 	}
 </style>
