@@ -28,12 +28,22 @@
 		</div>
 	</div>
 
-	<div class="program-container">
+	<!-- <div class="program-container">
 		<div class="w-full flex flex-col items-center">
-			<div class="max-w-screen-xl text-black flex items-center flex-col">
-				<h1 class="text-5xl mb-5">Program.</h1>
-				<Timeline />
-			</div>
+			<div class="max-w-screen-xl text-black flex items-center flex-col"> -->
+	<!-- <h1 class="text-5xl mb-5">Program.</h1> -->
+	<!-- <Timeline /> -->
+	<!-- </div>
+		</div>
+	</div> -->
+
+	<div id="stripes-container-timeline">
+		<div id="stripes">
+			<span />
+			<span />
+			<span />
+			<span />
+			<span />
 		</div>
 	</div>
 
@@ -42,7 +52,7 @@
 
 <style lang="scss">
 	main {
-		background-image: linear-gradient(to bottom, #310273, #501586, #6d2899, #8a3bac, #a74ebf);
+		background: white;
 	}
 
 	.wrapper {
@@ -55,6 +65,7 @@
 		justify-content: center;
 		align-items: center;
 		margin-top: -5%;
+		z-index: 1;
 		// position: relative;
 		-webkit-transform: skewY(-4deg);
 		transform: skewY(-4deg);
@@ -73,9 +84,9 @@
 
 	/* Colors */
 	$stripes_peach: (
-		'1': #ffd599,
-		'2': #f9b759,
-		'3': #ff9600
+		'1': #f9b759,
+		'2': #510aa8,
+		'3': #310373
 	);
 
 	@mixin stripesBG($color) {
@@ -101,8 +112,8 @@
 			// top: -20%;
 			// bottom: -30%;
 			left: 0;
-			z-index: -1;
-			background-color: #f6f9fc;
+			z-index: 1;
+			// background-color: #f6f9fc;
 			width: 100%;
 			height: 100%;
 			-webkit-transform: skewY(-4deg);
@@ -119,6 +130,7 @@
 		bottom: 0;
 		width: 100%;
 		height: 100%;
+		z-index: 1;
 		// min-height: 90vh;
 		transform: skewY(-4deg);
 		transform-origin: 0;
@@ -171,13 +183,68 @@
 		/* -------- End of peach stripes -------- */
 	}
 
-	$dark: #0065ff;
-	$medium: #2684ff;
-	$light: #b3d4ff;
-	$leftGrad: linear-gradient(270deg, transparent 35%, $light 100%);
-	$rightGrad: linear-gradient(90deg, transparent 35%, $light 100%);
+	/* -------- Timeline background -------- */
 
 	* {
-		box-sizing: border-box;
+		padding: 0;
+		margin: 0;
+	}
+
+	html,
+	body {
+		font-family: 'Montserrat Alternates', sans-serif;
+	}
+
+	#stripes {
+		padding-top: 105px;
+		padding-bottom: 800px;
+		height: 220vh;
+		background: linear-gradient(150deg, #310273 15%, #923baa 70%, #d98fee 94%);
+		clip-path: polygon(100% 0, 100% 80%, 0 99%, 0 0);
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-template-rows: repeat(12, 1fr);
+	}
+
+	#stripes :nth-child(1) {
+		grid-area: 1 / 1 / span 4 / span 2;
+		background-color: #320374b9;
+		clip-path: polygon(0 0, 100% 0%, 100% 60%, 0% 100%);
+	}
+
+	#stripes :nth-child(2) {
+		grid-area: 1 / 3 / span 3 / span 2;
+		background-color: #3a0778b4;
+		clip-path: polygon(0 0, 100% 0%, 100% 74%, 0% 100%);
+		transform: translateY(-30px);
+	}
+
+	#stripes :nth-child(3) {
+		grid-area: 1 / 5 / span 2 / span 2;
+		background-color: #3607707a;
+		clip-path: polygon(0 0, 100% 0, 99% 5%, 0 70%);
+	}
+
+	#stripes :nth-child(4) {
+		height: 100%;
+		margin-top: 100px;
+		grid-area: 3 / 11 / span 3 / span 2;
+		clip-path: polygon(0 23%, 100% 0%, 100% 77%, 0% 100%);
+		background-color: #7e3da3;
+	}
+
+	#stripes :nth-child(5) {
+		height: 100%;
+		margin-top: 250px;
+		grid-area: 9 / 1 / span 5 / span 4;
+		clip-path: polygon(0 23%, 100% 0%, 100% 80%, 0% 100%);
+		transform: translateY(4px);
+		background-color: #712897;
+	}
+
+	#stripes-container-timeline {
+		top: -71rem;
+		position: relative;
+		padding-top: 20px;
 	}
 </style>
