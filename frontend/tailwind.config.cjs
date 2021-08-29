@@ -7,7 +7,8 @@ const config = {
 		},
 		extend: {
 			height: {
-				'80vh': '80vh'
+				'80vh': '80vh',
+				'min-content': 'min-content'
 			}
 		}
 	},

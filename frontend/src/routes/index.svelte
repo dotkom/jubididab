@@ -1,8 +1,12 @@
 <script context="module">
+	import { DateTime } from 'luxon';
 	export async function load({ fetch }) {
 		const data = await fetch('https://retoolapi.dev/A3MXcI/events');
 		const json = await data.json();
-		const events = json.map((event) => ({ ...event, date: new Date(event.date) }));
+		const events = json.map((event) => ({
+			...event,
+			date: DateTime.fromJSDate(new Date(event.date))
+		}));
 		events.sort((event1, event2) => event1.date - event2.date);
 		return {
 			props: { events }
@@ -18,7 +22,7 @@
 	export let events;
 </script>
 
-<main class="gradient-background ">
+<main>
 	<Header text="35 ÅR" />
 	<div class="content-container">
 		<Description />
@@ -31,13 +35,10 @@
 </main>
 
 <style lang="postcss">
-	main {
-		background: #ca95d9;
-	}
 	.content-container {
-		@apply w-full flex flex-col items-center;
+		@apply w-full flex flex-col items-center bg-white;
 	}
 	.event-container {
-		@apply max-w-screen-xl text-black flex items-center flex-col;
+		@apply max-w-screen-xl text-black;
 	}
 </style>

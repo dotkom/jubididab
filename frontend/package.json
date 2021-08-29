@@ -20,5 +20,8 @@
 		"svelte-preprocess": "^4.7.4",
 		"tailwindcss": "^2.2.4"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"luxon": "^2.0.2"
+	}
 }
