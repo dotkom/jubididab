@@ -31,7 +31,7 @@
 	<div id="stripes-container-timeline" class="relative">
 		<div
 			id="popup"
-			class="z-10 absolute top-2/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 box-content h-3/5 w-3/6  bg-white shadow-2xl rounded-lg"
+			class="z-10 absolute top-2/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 box-content h-3/5 w-4/6  bg-white shadow-2xl rounded-lg"
 		>
 			<!-- <div class="program-container">
 				<div class="w-full flex flex-col items-center">
@@ -52,12 +52,12 @@
 		<div id="thank-you-section" class="-top-2/3 z-10">Thank</div>
 	</div>
 
-	<img src="dranks.png" alt="yes" style="margin: 0" width="100%" />
+	<img src="dranks.png" alt="yes" style="margin: 0" width="100%" class="-z-1 -top-96" />
 </main>
 
 <style lang="scss">
 	#popup {
-		margin-top: -10rem;
+		margin-top: -9rem;
 	}
 
 	#thank-you-section {
@@ -65,8 +65,9 @@
 		transform: skewY(-4deg);
 		margin-top: -23rem;
 		background-color: white;
-		height: 450px;
+		height: 600px;
 		z-index: 20;
+		margin-bottom: -1200px;
 	}
 
 	main {
