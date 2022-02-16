@@ -1,10 +1,7 @@
 <script>
 	import Event from './event.svelte';
-	import { events } from '../events';
-	// const fetchEvent = (async () => {
-	// 	const res = await fetch('https://retoolapi.dev/A3MXcI/events');
-	// 	return await res.json();
-	// })();
+
+	export let events;
 
 	const isToday = (someDate) => {
 		const today = new Date();
@@ -24,14 +21,9 @@
 		hour: 'numeric',
 		minute: 'numeric'
 	};
-
-	// let liveEvent = liveEventMock.json();
 </script>
 
 <ol class="relative border-l border-gray-200 dark:border-gray-700">
-	<!-- {#await fetchEvent}
-		<p>...waiting</p>
-	{:then events} -->
 	{#each events.slice(0, 6) as event}
 		<li class="mb-10 ml-4 -left-1.5">
 			{#if isToday(event.date)}
@@ -52,14 +44,11 @@
 				style="width: 200px; float: right; text-align: right"
 			>
 				<p class="text-[#d8c7ff]">
-					{event.date.toLocaleDateString('no-NO', options)}
+					{new Date(event.date).toLocaleDateString('no-NO', options)}
 				</p>
 			</div>
 
 			<Event {event} />
 		</li>
 	{/each}
-	<!-- {:catch error}
-		<pre>{error}</pre>
-	{/await} -->
 </ol>

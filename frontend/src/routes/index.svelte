@@ -1,7 +1,37 @@
+<script context="module">
+	import { client } from '../services/sanity';
+
+	// @type {import("@sveltejs/kit").Load}
+
+	export const load = async ({ fetch }) => {
+		const query = `
+		*[_type == "event"] {
+			_createdAt,
+			title,
+			date,
+			description,
+			link
+		}`;
+
+		const res = await client.fetch(query);
+
+		if (res) {
+			console.log(res);
+			return {
+				props: {
+					events: res
+				}
+			};
+		}
+	};
+</script>
+
 <script>
 	import Description from '../components/description.svelte';
 	import Header from '../components/header.svelte';
 	import Timeline from '../components/timeline.svelte';
+
+	export let events;
 </script>
 
 <main class="gradient-background">
@@ -29,7 +59,7 @@
 	</div>
 
 	<div class="timeline">
-		<Timeline />
+		<Timeline {events} />
 	</div>
 
 	<img src="dranks.png" alt="yes" class="bottom-img" width="100%" />
