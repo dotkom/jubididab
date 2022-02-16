@@ -15,14 +15,18 @@
 
 <div
 	tabindex="0"
-	class={event.date < new Date() && !isToday(event.date) ? 'collapse' : 'collapse collapse-open'}
+	class={new Date(event.date) < new Date() && !isToday(event.date)
+		? 'collapse'
+		: 'collapse collapse-open'}
 >
 	<input type="checkbox" />
 	<div class="collapse-title text-xl font-bold text-[#d8c7ff]">
 		{event.title}
 	</div>
 	<div class="collapse-content text-[#d8c7ff]">
-		<a href={event.link} class="text-[#d8c7ff]">Apply here</a>
+		<a href={event.link} class="text-[#d8c7ff] underline">Link til arr</a>
+		<br />
+		<br />
 		<p>{event.description}</p>
 	</div>
 </div>

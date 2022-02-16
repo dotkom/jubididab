@@ -3,6 +3,10 @@
 
 	export let events;
 
+	events = events.sort(function (a, b) {
+		return new Date(a.date) - new Date(b.date);
+	});
+
 	const isToday = (someDate) => {
 		const today = new Date();
 		someDate = new Date(someDate);
@@ -24,7 +28,7 @@
 </script>
 
 <ol class="relative border-l border-gray-200 dark:border-gray-700">
-	{#each events.slice(0, 6) as event}
+	{#each events as event}
 		<li class="mb-10 ml-4 -left-1.5">
 			{#if isToday(event.date)}
 				<div
