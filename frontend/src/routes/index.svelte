@@ -28,11 +28,7 @@
 		</div>
 	</div>
 
-	<div
-		class="align-content: center;"
-		style="margin-top: -46rem;
-	margin-bottom: 60rem;"
-	>
+	<div class="timeline">
 		<Timeline />
 	</div>
 
@@ -55,8 +51,11 @@
 	}
 
 	.timeline {
-		margin-top: -46rem;
-		margin-bottom: 60rem;
+		margin-top: -50rem;
+		position: relative;
+		padding-bottom: 60rem;
+		max-width: 55rem;
+		margin-left: 27%;
 	}
 
 	// #thank-you-section {
