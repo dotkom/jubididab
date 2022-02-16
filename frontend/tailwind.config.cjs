@@ -1,6 +1,7 @@
+const daisyui = require('daisyui');
 const config = {
 	mode: 'jit',
-	purge: ['./src/**/*.{html,js,svelte,ts}'],
+	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
 		fontFamily: {
 			sans: ['"Lato"']
@@ -11,7 +12,8 @@ const config = {
 			}
 		}
 	},
-	plugins: [require("daisyui")],
+
+	plugins: [daisyui]
 };
 
 module.exports = config;
