@@ -9,7 +9,8 @@
 {#await fetchEvent}
 	<p>...waiting</p>
 {:then events}
-	{#each events as event}
+	{#each events.slice(0, 6) as event}
+		{console.log(event)}
 		<Event {event} />
 	{/each}
 {:catch error}

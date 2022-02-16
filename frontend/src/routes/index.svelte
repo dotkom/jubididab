@@ -21,38 +21,22 @@
 		</div>
 	</div>
 
-	<div class="stripes-container">
+	<div class="stripes-container bottom">
 		<div class="stripes stripes--peach">
 			<span class="s5" />
 			<span class="s6" />
 		</div>
 	</div>
 
-	<div id="stripes-container-timeline" class="relative">
-		<div
-			id="popup"
-			class="z-10 absolute top-2/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 box-content h-3/5 w-4/6  bg-white shadow-2xl rounded-lg"
-		>
-			<!-- <div class="program-container">
-				<div class="w-full flex flex-col items-center">
-					<div class="max-w-screen-xl text-black flex items-center flex-col"> -->
-			<!-- <h1 class="text-5xl mb-5">Program.</h1>
-			<Timeline /> -->
-			<!-- </div>
-				</div>
-			</div> -->
-		</div>
-		<div id="stripes">
-			<span />
-			<span />
-			<span />
-			<span />
-			<span />
-		</div>
-		<div id="thank-you-section" class="-top-2/3 z-10">Thank</div>
+	<div
+		class="align-content: center;"
+		style="margin-top: -46rem;
+	margin-bottom: 60rem;"
+	>
+		<Timeline />
 	</div>
 
-	<img src="dranks.png" alt="yes" style="margin: 0" width="100%" class="-z-1 -top-96" />
+	<img src="dranks.png" alt="yes" class="bottom-img" width="100%" />
 </main>
 
 <style lang="scss">
@@ -60,18 +44,34 @@
 		margin-top: -9rem;
 	}
 
-	#thank-you-section {
-		-webkit-transform: skewY(-4deg);
-		transform: skewY(-4deg);
-		margin-top: -23rem;
-		background-color: white;
-		height: 600px;
-		z-index: 20;
-		margin-bottom: -1200px;
+	.bottom-img {
+		margin-top: -30rem;
+		overflow-y: hidden;
+		border: none;
+		box-shadow: none;
+		padding: 0px;
+		outline: 0 !important;
+		content: '';
 	}
 
+	.timeline {
+		margin-top: -46rem;
+		margin-bottom: 60rem;
+	}
+
+	// #thank-you-section {
+	// 	-webkit-transform: skewY(-4deg);
+	// 	transform: skewY(-4deg);
+	// 	margin-top: -23rem;
+	// 	background-color: white;
+	// 	height: 600px;
+	// 	z-index: 20;
+	// 	margin-bottom: -1200px;
+	// }
+
 	main {
-		background: white;
+		background-color: #5b2cbf;
+		background-image: linear-gradient(43deg, #310273 0%, #5b2cbf 30%, #a74ebf 66%, #f2b705 100%);
 	}
 
 	.wrapper {
@@ -125,19 +125,23 @@
 		position: relative;
 		min-height: 500px;
 		height: 100%;
-		&:before {
-			content: '';
-			position: absolute;
-			// top: -20%;
-			// bottom: -30%;
-			left: 0;
-			z-index: 1;
-			// background-color: #f6f9fc;
-			width: 100%;
-			height: 100%;
-			-webkit-transform: skewY(-4deg);
-			transform: skewY(-4deg);
-		}
+		// &:before {
+		// 	content: '';
+		// 	position: absolute;
+		// 	// top: -20%;
+		// 	// bottom: -30%;
+		// 	left: 0;
+		// 	z-index: 1;
+		// 	// background-color: #f6f9fc;
+		// 	width: 100%;
+		// 	height: 100%;
+		// 	-webkit-transform: skewY(-4deg);
+		// 	transform: skewY(-4deg);
+		// }
+	}
+
+	.bottom {
+		// margin-bottom: -60rem;
 	}
 
 	.stripes {
