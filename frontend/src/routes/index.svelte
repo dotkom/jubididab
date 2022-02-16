@@ -16,7 +16,6 @@
 		const res = await client.fetch(query);
 
 		if (res) {
-			console.log(res);
 			return {
 				props: {
 					events: res
