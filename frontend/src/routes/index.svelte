@@ -69,6 +69,9 @@
 </main>
 
 <style lang="scss">
+	h1 {
+		margin-bottom: 3rem;
+	}
 	#popup {
 		margin-top: -9rem;
 	}

@@ -27,7 +27,7 @@
 	};
 </script>
 
-<ol class="relative border-l border-gray-200 ">
+<ol class="relative border-l border-gray-200">
 	{#each events as event}
 		<li class="mb-10 ml-4 -left-1.5 ">
 			{#if isToday(event.date)}
