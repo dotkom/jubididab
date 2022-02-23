@@ -27,20 +27,16 @@
 	};
 </script>
 
-<ol class="relative border-l border-gray-200 dark:border-gray-700 mt-10">
+<ol class="relative border-l border-gray-200 ">
 	{#each events as event}
 		<li class="mb-10 ml-4 -left-1.5 ">
 			{#if isToday(event.date)}
 				<div
-					class="animate-ping absolute w-4 h-4 bg-green-300 rounded-full -left-2 border border-green dark:border-green-900 dark:bg-green-700"
+					class="animate-ping absolute w-4 h-4 bg-green-300 rounded-full -left-2 border border-green"
 				/>
-				<div
-					class="absolute w-4 h-4 bg-green-300 rounded-full -left-2 border border-green dark:border-green-900 dark:bg-green-700"
-				/>
+				<div class="absolute w-4 h-4 bg-green-300 rounded-full -left-2 border border-green" />
 			{:else}
-				<div
-					class="absolute w-3 h-3 bg-gray-200 rounded-full -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
-				/>
+				<div class="absolute w-3 h-3 bg-gray-200 rounded-full -left-1.5 border border-white" />
 			{/if}
 			<p class="date-responsive text-[#d8c7ff]">
 				{new Date(event.date).toLocaleDateString('no-NO', options)}
