@@ -2,6 +2,7 @@
 	import { client } from '../services/sanity';
 
 	// @type {import("@sveltejs/kit").Load}
+	import { ConfettiExplosion } from 'svelte-confetti-explosion';
 
 	export const load = async ({ fetch }) => {
 		const query = `
@@ -34,6 +35,13 @@
 </script>
 
 <main class="gradient-background">
+	<ConfettiExplosion
+		--x="50vw"
+		--y="20vh"
+		colors={['#f2b705', '#5b2cbf', '#310273', '#a74ebf']}
+		stageHeight={4300}
+		particleCount={200}
+	/>
 	<Header text="35 ÅR" />
 	<div class="wrapper">
 		<Description />
