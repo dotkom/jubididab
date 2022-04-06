@@ -21,7 +21,7 @@ export default createSchema({
         {
           title: "Dato",
           name: "date",
-          type: "date",
+          type: "datetime",
         },
         {
           title: "Beskrivelse",
