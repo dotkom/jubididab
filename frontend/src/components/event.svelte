@@ -24,7 +24,7 @@
 		{event.title}
 	</div>
 	<div class="collapse-content text-[#d8c7ff]">
-		<a href={event.link} class="text-[#d8c7ff] underline">Link til arr</a>
+		<a href={event.link} class="text-[#d8c7ff] underline">{event.link}</a>
 		<br />
 		<br />
 		<p>{event.description}</p>
