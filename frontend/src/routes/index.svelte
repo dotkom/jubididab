@@ -61,11 +61,6 @@
 		<h1 class="text-3xl text-[#d8c7ff] font-semibold">Program.</h1>
 		<Timeline {events} />
 	</div>
-
-	<div class="flex justify-center items-end">
-		<img src="dranks.png" alt="yes" class="bottom-img" width="100%" />
-		<!-- <h1 class="text-center text-7xl ml-4 text-white font-bold mb-2">{text}</h1> -->
-	</div>
 </main>
 
 <style lang="scss">
